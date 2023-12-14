@@ -1,0 +1,14 @@
+<div class="max-w-md mx-auto my-8">
+    <div class="border rounded-lg p-4 shadow-md mb-4" *ngFor="let message of messages$ | async">
+        <p class="text-lg">{{ message.message }}</p>
+        <small>Sent at: {{ formatTimestamp(message.timestamp) }}</small>
+        <hr class="my-2 border-t border-gray-200">
+    </div>
+
+    <div class="flex items-center">
+        <textarea class="w-full p-2 rounded border focus:outline-none focus:border-blue-500" [(ngModel)]="newMessage"
+            placeholder="Type your message..."></textarea>
+        <button class="ml-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            (click)="sendMessage()">Send</button>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chat-d9e45": {
+      "hosting": {
+        "firebase-chat-app": [
+          "chat-d9e45"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chat-d9e45"
+  }
+}

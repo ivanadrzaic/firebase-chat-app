@@ -94,8 +94,28 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "firebase-chat-app:build:production",
+              "serveTarget": "firebase-chat-app:serve:production"
+            },
+            "development": {
+              "buildTarget": "firebase-chat-app:build:development",
+              "serveTarget": "firebase-chat-app:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "2c1f5a81-992c-4572-be45-5dcb1327ca8d"
   }
 }
