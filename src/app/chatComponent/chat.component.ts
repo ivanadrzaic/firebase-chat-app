@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-
 import { Observable } from 'rxjs';
-import { DatePipe } from '@angular/common'; // Import DatePipe
+import { DatePipe } from '@angular/common';
 import { ChatService } from '../chatService/chat.service';
 
 @Component({

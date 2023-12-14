@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { AppComponent } from './app.component';
-import { environment } from '../environment';
+import { environment } from '../environments/environment';
 import { AngularFireModule } from "@angular/fire/compat";
 import { AppRoutingModule } from './app.routes';
 import { ChatModule } from './chatComponent/chat.module';
@@ -11,10 +8,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
-
-const app = initializeApp(environment.firebaseConfig);
-const analytics = getAnalytics(app);
 
 
 @NgModule({
@@ -25,6 +23,10 @@ const analytics = getAnalytics(app);
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     AppRoutingModule,
     ChatModule,
     RouterModule

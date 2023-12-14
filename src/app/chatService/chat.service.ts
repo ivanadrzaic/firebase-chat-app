@@ -1,25 +1,25 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatService {
-  private chatMessages: AngularFireList<any>;
+  private chatCollection: AngularFirestoreCollection<any>;
 
-  constructor(private db: AngularFireDatabase) {
-    this.chatMessages = this.db.list('chat');
+  constructor(private firestore: AngularFirestore) {
+    this.chatCollection = this.firestore.collection('chatMessages');
   }
 
   sendMessage(message: string) {
-    this.chatMessages.push({
+    this.chatCollection.add({
       message,
       timestamp: Date.now()
     });
   }
 
   getMessages(): Observable<any[]> {
-    return this.chatMessages.valueChanges();
+    return this.chatCollection.valueChanges();
   }
 }
