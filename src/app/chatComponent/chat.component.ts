@@ -12,7 +12,7 @@ import { ChatService } from '../chatService/chat.service';
 })
 export class ChatComponent {
   messages$: Observable<any[]>;
-  newMessage: string = ''; // Ensure 'newMessage' is explicitly declared as a string
+  newMessage: string = '';
 
   constructor(private chatService: ChatService, private datePipe: DatePipe) {
     this.messages$ = this.chatService.getMessages();

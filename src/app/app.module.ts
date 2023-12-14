@@ -20,7 +20,6 @@ const analytics = getAnalytics(app);
     AppComponent
   ],
   imports: [
-    
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
