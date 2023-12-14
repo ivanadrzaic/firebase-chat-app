@@ -17,7 +17,7 @@ describe('AppComponent', () => {
   it(`should have the 'firebase-chat-app' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    // expect(app.title).toEqual('firebase-chat-app');
+    expect(app.title).toEqual('firebase-chat-app');
   });
 
   it('should render title', () => {

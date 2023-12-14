@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app.routes';
 import { ChatModule } from './chatComponent/chat.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 
 
 const app = initializeApp(environment.firebaseConfig);
@@ -24,7 +26,8 @@ const analytics = getAnalytics(app);
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AppRoutingModule,
-    ChatModule
+    ChatModule,
+    RouterModule
   ]
 })
 export class AppModule { }

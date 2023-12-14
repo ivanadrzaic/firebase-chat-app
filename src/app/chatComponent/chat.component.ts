@@ -7,7 +7,7 @@ import { ChatService } from '../chatService/chat.service';
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css'],
+  styleUrls: ['./chat.component.scss'],
   providers: [DatePipe]
 })
 export class ChatComponent {
