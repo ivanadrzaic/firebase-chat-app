@@ -28,7 +28,8 @@ const analytics = getAnalytics(app);
     AppRoutingModule,
     ChatModule,
     RouterModule
-  ]
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 
