@@ -4,15 +4,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChatComponent } from './chat.component';
 
 
-
 @NgModule({
     declarations: [
-        ChatComponent
+        // ChatComponent 
     ],
     imports: [
         CommonModule,
         FormsModule,
         ReactiveFormsModule
+    ],
+    exports: [
+        // ChatComponent 
     ]
 })
 export class ChatModule { }

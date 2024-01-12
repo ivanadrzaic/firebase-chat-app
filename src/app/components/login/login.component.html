@@ -1,0 +1,39 @@
+<!-- login.component.html -->
+<div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8">
+        <div>
+            <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                Sign in to CHAT Application
+            </h2>
+        </div>
+        <form (ngSubmit)="login()">
+            <div class="space-y-6">
+                <div class="col-span-full mt-2">
+                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                    <div class="mt-2">
+                        <input id="email" name="email" type="email" autocomplete="email" [(ngModel)]="email" required
+                            class="appearance-none rounded-none relative block w-full rounded-t-md border-gray-300 border-b bg-white py-3 px-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                            placeholder="Email address">
+                    </div>
+                </div>
+
+                <div class="col-span-full mt-2">
+                    <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                    <div class="mt-2">
+                        <input id="password" name="password" type="password" autocomplete="current-password"
+                            [(ngModel)]="password" required
+                            class="appearance-none rounded-none relative block w-full rounded-b-md border-gray-300 bg-white py-3 px-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                            placeholder="Password">
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit"
+                        class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Sign in
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
